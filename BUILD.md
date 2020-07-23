@@ -6,7 +6,7 @@ repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b andro
 ### Local manifest
 ```bash
 mkdir -p .repo/local_manifests
-curl -Ls https://gist.github.com/koumaza/a0682287a6703732f9b40157b53439e8/raw/4f497ea4fd2bff23f3f81bcfecc2a9753e9f0bcd/pbrb-payton.xml > .repo/local_manifests/pbrp-payton.xml
+curl -Ls https://gist.github.com/koumaza/a0682287a6703732f9b40157b53439e8/raw/05b5d3d2e39a43c16a66717f1941b45c787f9fb9/pbrb-payton.xml > .repo/local_manifests/pbrp-payton.xml
 ```
 
 ### Sync
