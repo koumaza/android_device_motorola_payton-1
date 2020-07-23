@@ -7,8 +7,9 @@ Copyright 2018 - The OmniROM Project
 For building TWRP for Motorola Moto X4 ONLY.
 
 ### Kernel Source
-Check here: https://github.com/ixmoe/android_kernel_motorola_sdm630
+~~Check here: https://github.com/ixmoe/android_kernel_motorola_sdm630~~
 
+Check here: https://github.com/DhineshCool/Dxt_payton/tree/v2.2
 ### How to compile
 
 ```sh
