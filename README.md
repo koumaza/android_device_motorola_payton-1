@@ -1,3 +1,5 @@
+# Build
+Goto ___[BUILD.md](BUILD.md)___
 # TWRP Device configuration for Motorola Moto X4 (payton)
 
 Copyright 2018 - The OmniROM Project
