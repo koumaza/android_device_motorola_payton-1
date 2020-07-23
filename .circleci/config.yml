@@ -29,4 +29,5 @@ jobs:
             git config --global user.email $GitHubMail
             git config --global user.name $GitHubName
             git config --global color.ui true
+	    wget -q https://raw.githubusercontent.com/koumaza/android_device_motorola_payton-1/android-9.0/build.sh
             source build.sh
