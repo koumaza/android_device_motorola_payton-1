@@ -51,7 +51,7 @@ mkdir $(pwd)/work && cd work
 
 echo -e "Initializing PBRP repo sync..."
 repo init -q -u https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b ${MANIFEST_BRANCH} --depth=1
-mkdir -p .repo/local_manifests && curl -Ls https://gist.github.com/koumaza/a0682287a6703732f9b40157b53439e8#file-pbrb-payton-xml > .repo/local_manifests/pbrp-payton.xml
+mkdir -p .repo/local_manifests && curl -Ls https://gist.github.com/koumaza/a0682287a6703732f9b40157b53439e8/raw/4f497ea4fd2bff23f3f81bcfecc2a9753e9f0bcd/pbrb-payton.xml > .repo/local_manifests/pbrp-payton.xml
 time repo sync -c -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 # CLONE VENDOR REPO AGAIN FOR SAFEKEEPING
 rm -rf vendor/pb && git clone https://github.com/PitchBlackRecoveryProject/vendor_pb -b pb vendor/pb --depth=1
