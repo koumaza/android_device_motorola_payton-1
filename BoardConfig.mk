@@ -58,7 +58,7 @@ BOARD_PROVIDES_GPTUTILS := true
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/motorola/payton/Image.gz-dtb
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.hab.csv=2 androidboot.hab.product=payton androidboot.hab.cid=50
 # For the love of all that is holy, please do not include this in your ROM unless you really want TWRP to not work correctly!
 BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
@@ -66,7 +66,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_RAMDISK_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000

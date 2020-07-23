@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Release name
+PRODUCT_RELEASE_NAME := payton
+
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
@@ -61,10 +64,17 @@ PRODUCT_PACKAGES += \
 
 # ROM fstab
 PRODUCT_COPY_FILES += \
-  device/motorola/payton/rootdir/root/fstab.qcom:root/fstab.qcom
+	device/motorola/payton/rootdir/root/fstab.qcom:root/fstab.qcom
 
 PRODUCT_DEVICE := payton
 PRODUCT_NAME := omni_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola
+TARGET_VENDOR_PRODUCT_NAME := payton
+TARGET_VENDOR_DEVICE_NAME := payton
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=payton \
+    BUILD_PRODUCT=payton \
+    PRODUCT_NAME=payton
+PRODUCT_PROPERTY_OVERRIDES := ro.treble.enabled=true
